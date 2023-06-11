@@ -41,8 +41,7 @@ function set_mask(row, col, mask_size, y)
     append!(key_positions, surrounding_positions)
 end
 
-function run(x, y, image)
-    mask_size = 7
+function run(x, y, image, mask_size)
     total = mask_size*mask_size
     empty = zeros(x, y)
 
@@ -67,7 +66,7 @@ function main(path)
 
     x, y = size(image)
 
-    save("blur01.jpeg", run(x, y, image))
+    save("blur01.jpeg", run(x, y, image, 3))
 end
 
 main("../images/pratica4.jpg")
