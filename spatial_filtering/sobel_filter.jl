@@ -1,3 +1,4 @@
+#https://pt.wikipedia.org/wiki/Filtro_Sobel
 using Images, FileIO
 
 function set_mask(row, col, mask_size, y)
